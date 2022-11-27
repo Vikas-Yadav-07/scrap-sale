@@ -25,3 +25,13 @@ html {
     background-size: contain;
 
 }
+
+.navbar-menu {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
