@@ -9,6 +9,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
   <title>Scrap Seller</title>
 </head>
 
@@ -18,8 +21,8 @@
   <header class="absolute left-0 top-0 z-50 w-full">
     <div class="px-10 ">
       <div class="relative  flex items-center justify-between">
-        <div class="w-60 max-w-full ">
-          <a href="javascript:void(0)" class="block w-full py-5 w-24 ">
+        <div class="w-60 max-w-full sm:w-20 ">
+          <a href="javascript:void(0)" class="block logo py-5 w-24 ">
             <img src="./images//Logo.png" alt="logo" class="w-full" />
           </a>
         </div>
@@ -48,11 +51,11 @@
         <div class="w-50  lg:w-5/12">
           <div class="hero-content">
             <p
-              class="text-dark md:pt-32 -mt-10 mb-3 text-4xl  text-center font-bold leading-snug sm:text-[42px] lg:text-[40px] xl:text-[68px] md:text-left font-bold">
+              class="text-dark md:pt-32 -mt-56 mb-3 text-4xl hero-text text-center font-bold leading-snug sm:text-[42px] lg:text-[40px] xl:text-[68px] md:text-left font-bold">
               Sell
-              Your Scrap Items With Us At Desirable Pricings
+              Your Scrap 
             </p>
-            <div class="text-sm text-gray-700 text-3xl text-center md:text-left ">Looking to make some extra cash? Why
+            <div class="text-dm text-gray-700 text-3xl text-center md:text-left ">Looking to make some extra cash? Why
               not sell your scrap metal with us.The rising prices of metals, scrap selling has become a popular way to
               make some extra money.That's where we comes in role,
               We buy your scarps with price that satistfy your pocket</div>
@@ -65,8 +68,8 @@
         <div class="hidden px-4 lg:block lg:w-1/12"></div>
         <div class="w-full px-4 lg:w-6/12">
           <div class="lg:ml-auto lg:text-right">
-            <div class="relative z-10 inline-block pt-2 lg:pt-0">
-              <img src="images/heroImage.webp" alt="hero" class="max-w-full lg:ml-auto" />
+            <div class="relative z-10 -mt-48 inline-block pt-2 lg:pt-0">
+              <img src="images/heroImage.webp" alt="hero" class="w-[685px] lg:ml-auto" />
               <span class="absolute -left-8 -bottom-8 z-[-1]">
                 <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
@@ -385,7 +388,7 @@
               </div>
               <div class="w-full">
                 <h4 class="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                <p class="text-body-color text-base">(+62)81 414 257 9980</p>
+                <p class="text-body-color text-base">+91 9781189383</p>
               </div>
             </div>
             <div class="mb-8 flex w-full max-w-[370px]">
@@ -398,7 +401,7 @@
               </div>
               <div class="w-full">
                 <h4 class="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                <p class="text-body-color text-base">indevelopement@gmail.com</p>
+                <p class="text-body-color text-base">businesses.lohabecho@gmail.com</p>
               </div>
             </div>
           </div>
@@ -407,24 +410,24 @@
           <div class="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
             <form>
               <div class="mb-6">
-                <input type="text" placeholder="Your Name"
+                <input type="text" id="user-name" placeholder="Your Name"
                   class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
               </div>
               <div class="mb-6">
-                <input type="email" placeholder="Your Email"
+                <input type="email" id="user-email" placeholder="Your Email"
                   class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
               </div>
               <div class="mb-6">
-                <input type="text" placeholder="Your Phone"
+                <input type="text" id="user-phone" placeholder="Your Phone"
                   class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
               </div>
               <div class="mb-6">
-                <textarea rows="6" placeholder="Your Message"
+                <textarea rows="6" id="user-message" placeholder="Your Message"
                   class="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"></textarea>
               </div>
               <div>
                 <button type="submit"
-                  class="bg-blue-500 text-white border-primary w-full rounded border p-3 text-black transition hover:bg-opacity-90">
+                  class="bg-blue-500 submit-btn text-white border-primary w-full rounded border p-3 text-black transition hover:bg-opacity-90">
                   Send Message
                 </button>
               </div>
@@ -737,6 +740,12 @@
     </div>
   </footer>
   <script src="./app.js"></script>
+  <script type="text/javascript">
+    (function(){
+       emailjs.init("8WiaSW-voYP5sFRpu");
+    })();
+   
+ </script>
 </body>
 
 </html>

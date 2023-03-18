@@ -35,3 +35,15 @@ html {
     right: 0;
     
 }
+
+.logo {
+    width: 120px;
+    @media (min-width: 900px;) {
+        width:650px;
+    }
+}
+
+.hero-text {
+    padding: 0px;
+
+}
