@@ -17,12 +17,18 @@ const sendEmail = async (e) => {
       user_contact: user_contact.value,
     },
   };
-   fetch("https://api.emailjs.com/api/v1.0/email/send", {
+  fetch("https://api.emailjs.com/api/v1.0/email/send", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(params),
+  }).then((data) => {
+    alert("Thanks for sharing your info, We will get back to you soon");
+    user_name.value = "";
+    message.value = "";
+    user_email.value = "";
+    user_contact.value = "";
   });
 };
 
